@@ -11,6 +11,9 @@ func Parse(number string, country string) string {
 	if !strings.HasPrefix(number, "+") {
 		number = "+" + number
 	}
+	if len(number) < 3 {
+		return ""
+	}
 	return number
 	// return parseInternal(number, country, false)
 }
